@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreManager : Singleton<ScoreManager> {
@@ -8,21 +9,24 @@ public class ScoreManager : Singleton<ScoreManager> {
     [SerializeField]
     private Text scoreText;
 
-    private float timeLeft = 60f;
+    private float initialTimeLeft = 60f;
+    private float timeLeft;
     private int score;
 
     private void Start ()
     {
-        UpdateScore ();
+        if (SceneManager.GetActiveScene ().name == "main")
+        {
+            timeLeft = initialTimeLeft;
+            UpdateScore ();
+        }
     }
 
     private void Update ()
     {
-        timeLeft -= Time.deltaTime;
-        UpdateTimeLeft ();
-        if (timeLeft < 0)
+        if (SceneManager.GetActiveScene ().name == "main")
         {
-            LevelManager.Instance.GoToMenu ();
+            UpdateTimer ();
         }
     }
 
@@ -40,6 +44,16 @@ public class ScoreManager : Singleton<ScoreManager> {
     private void UpdateTimeLeft ()
     {
         timeLeftText.text = "Time Left: " + timeLeft.ToString ("00");
+    }
+
+    private void UpdateTimer ()
+    {
+        timeLeft -= Time.deltaTime;
+        UpdateTimeLeft ();
+        if (timeLeft < 0)
+        {
+            LevelManager.Instance.GoToMenu ();
+        }
     }
 
 }

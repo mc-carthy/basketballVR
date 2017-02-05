@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour {
 
     private Camera cam;
     private Vector3 ballOffset = new Vector3 (0, -1, 2);
-    private float ballLaunchAngleOffsetDeg = 30f;
-    private float ballSpeed = 20;
+    private float ballLaunchAngleOffsetDeg = 45f;
+    private float ballSpeed = 12.5f;
 
     private void Awake ()
     {
