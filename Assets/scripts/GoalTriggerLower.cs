@@ -3,6 +3,12 @@
 public class GoalTriggerLower : MonoBehaviour {
 
     private Collider expectedCollider;
+    private GvrAudioSource source;
+
+    private void Awake ()
+    {
+        source = GetComponent<GvrAudioSource> ();
+    }
 
     public void ExpectCollider (Collider other)
     {
@@ -14,6 +20,7 @@ public class GoalTriggerLower : MonoBehaviour {
         if (other == expectedCollider)
         {
             ScoreManager.Instance.AddToScore ();
+            source.PlayOneShot(source.clip);
         }
     }
 

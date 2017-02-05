@@ -1788,6 +1788,7 @@ GameObject:
   - component: {fileID: 4650239386110134}
   - component: {fileID: 65489315494596338}
   - component: {fileID: 114977712271874998}
+  - component: {fileID: 114638647774490574}
   m_Layer: 0
   m_Name: goalTriggerLower
   m_TagString: Untagged
@@ -1857,6 +1858,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e15801feb38c4ce0a152f0d7663fca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114638647774490574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1863813631510672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: 0a0443ba20f910d43af1e4aa65ef2c09, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
+  audioSource: {fileID: 0}
 --- !u!114 &114977712271874998
 MonoBehaviour:
   m_ObjectHideFlags: 1
