@@ -13,4 +13,9 @@ public class LevelManager : Singleton<LevelManager> {
         Application.Quit ();
     }
 
+    public void GoToMenu ()
+    {
+        SceneManager.LoadScene ("menu", LoadSceneMode.Single);
+    }
+
 }
