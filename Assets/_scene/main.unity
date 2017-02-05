@@ -362,6 +362,53 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 537132261}
+--- !u!1001 &827997234
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 488160, guid: f13ef45a14d378049a882a35a9588d8c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: f13ef45a14d378049a882a35a9588d8c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: f13ef45a14d378049a882a35a9588d8c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: f13ef45a14d378049a882a35a9588d8c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: f13ef45a14d378049a882a35a9588d8c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: f13ef45a14d378049a882a35a9588d8c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: f13ef45a14d378049a882a35a9588d8c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 488160, guid: f13ef45a14d378049a882a35a9588d8c, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114314227069580994, guid: f13ef45a14d378049a882a35a9588d8c,
+        type: 2}
+      propertyPath: sourceLoop
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f13ef45a14d378049a882a35a9588d8c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &835233145
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,6 +421,7 @@ GameObject:
   - component: {fileID: 835233148}
   - component: {fileID: 835233147}
   - component: {fileID: 835233146}
+  - component: {fileID: 835233151}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -381,13 +429,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &835233146
-AudioListener:
+--- !u!114 &835233146
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 835233145}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1156c073149742478887bb24456f32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalGainDb: 0
+  worldScale: 1
+  occlusionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  quality: 2
 --- !u!124 &835233147
 Behaviour:
   m_ObjectHideFlags: 0
@@ -449,6 +507,13 @@ Transform:
   m_Father: {fileID: 1984518062}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &835233151
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835233145}
+  m_Enabled: 1
 --- !u!1 &950013674
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +556,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1030459144
+--- !u!1001 &1674410328
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -533,22 +598,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e6cf7da218ba4a41b1325cd6fdd27d0, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1133057049 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1203307784509200, guid: 9e6cf7da218ba4a41b1325cd6fdd27d0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1030459144}
---- !u!114 &1133057050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1133057049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e15801feb38c4ce0a152f0d7663fca1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1828993413
 GameObject:
   m_ObjectHideFlags: 0
